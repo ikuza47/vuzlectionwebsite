@@ -1,56 +1,172 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <title>Hyperlinks</title>
-    </head>
-    <body>
-        <ol>
-            <li><a href="http://www.kubsu.ru/">абсолютная гиперссылка главную страницу сайта kubsu.ru</a></li>
-
-            <li><a href="https://www.kubsu.ru/">абсолютная на главную сайта kubsu.ru в протоколе https</a></li>
-            
-            <li><a href="http://www.kubsu.ru/"><img src="assets/image.jpg"></a></li>
-            
-            <li><a href="/demo">сокращенная ссылка на внутреннюю страницу</a></li>
-            
-            <li><a href="/">сокращенная ссылка на главную страницу</a></li>
-            
-            <li><a href="#fragment_test">ссылка на фрагмент текущей страницы</a></li>
-            
-            <li><a href="https://kubsu.ru/?par1=a&par2=b&par3=c">ссылка с тремя параметрами в URL</a></li>
-            
-            <li><a href="https://kubsu.ru/#main-content">ссылка с параметром id в URL</a></li>
-            
-            <li><a href="./demo.html">относительная на страницу в текущем каталоге</a></li>
-            
-            <li><a href="./about/demo.html">относительная на страницу в каталоге about</a></li>
-            
-            <li><a href="../demo.html">относительная на страницу в каталоге уровнем выше текущего</a></li>
-            
-            <li><a href="../../demo.html">относительная на страницу в каталоге двумя уровнями выше</a></li>
-            
-            <li><h1><a href="http://www.kubsu.ru/">контекстная</a> в тексте абзаца</h1></li>
-            
-            <li><a href="https://kubsu.ru/#main-content">ссылка на фрагмент страницы стороннего сайта</a></li>
-            
-            <li><a href="">ссылки из прямоугольных и круглых областей картинки (HTML-тег map)</a></li>
-            
-            <li><a href="">ссылка с пустым href</a></li>
-            
-            <li><a>ссылка без href</a></li>
-            
-            <li><a href="http://www.kubsu.ru/" rel="nofollow">ссылка, по которой запрещен переход поисковикам</a></li>
-            
-            <li><noindex><a href="http://www.kubsu.ru/">запрещенная для индексации поисковиками</a></noindex></li>
-            
-            <li><a href="">нумерованный список ссылок с подписями title</a></li>
-            
-            <li><a href="">ссылка на файл на сервере FTP с авторизацией</a></li>
-        </ol>
-        <p id="fragment_test"> Фрагмент</p>
-
-        
-
-        <a></a>
-    </body>
+<head>
+  <meta charset="UTF-8">
+  <title> Лабораторная </title>
+</head>
+<body>
+  <h3> Ссылки </h3>
+<ul> 
+    <li>
+  <a href = "http://kubsu.ru" target = "_blank"> Сайт КубГУ (HTTP) </a>
+</li> 
+ <li>
+  <a href = "https://kubsu.ru" target = "_blank"> Сайт КубГУ </a>
+</li> 
+  <li>
+    <a href = "https://kubsu.ru" target = "_blank">
+      <img src="image.jpg" alt="Ссылка-изображение" id="a1" width="600" height="600">
+    </a>
+  </li>
+    
+    <li>
+      <a href="#formi">Сокращенная ссылка на внутреннюю страницу </a>
+    </li> 
+    
+    <li>
+      <a href="#top">Сокращенная ссылка на главную страницу </a>
+    </li> 
+    
+    <li>
+      <a href="#fragment">Ссылка на фрагмент текущей страницы</a>
+    </li> 
+    
+    <li>
+      <a href="https://www.kubsu.ru/ru/search?key=программирование" target="_blank">Ссылка с тремя параметрами в URL </a>
+    </li> 
+    
+    <li>
+      <a href="https://www.kubsu.ru/ru/education/programs?id=1" target="_blank">Ссылка с параметром id в URL</a>
+    </li> 
+    
+    <li>
+      <a href="https://kubsu.ru/ru/news" target="_blank"> Относительная ссылка на страницу в текущем каталоге</a>
+    </li> 
+    
+    <li>
+      <a href="https://kubsu.ru/ru/about" target="_blank">Относительная ссылка на страницу в каталоге about</a>
+    </li> 
+    
+    <li>
+      <a href="https://kubsu.ru/ru" target="_blank">Относительная ссылка на страницу в каталоге уровнем выше текущего</a>
+    </li> 
+    
+    <li>
+      <a href="https://kubsu.ru" target="_blank">Относительная ссылка на страницу в каталоге двумя уровнями выше</a>
+    </li> 
+    
+    <li>
+      <p>Кубанский государственный университет 5 сентября отмечает 
+        <a href="https://www.kubsu.ru/ru/node/44498" target="_blank">105-летний юбилей.</a> 
+        В этот день в 1920 году вуз впервые открыл двери для студентов трех факультетов.</p>
+    </li> 
+    
+    <li>
+      <a href="https://ru.ruwiki.ru/wiki/Кубанский_государственный_университет#Структура" target="_blank">Ссылка на фрагмент страницы стороннего сайта</a>
+    </li>
+    
+    <li>
+      <img src="кубгу.jpg" alt="Ссылка-изображение" usemap="#mymap" width="800" height="400">
+      <map name="mymap">
+        <area shape="rect" coords="0,0,400,200" href="https://kubsu.ru" alt="главная" target="_blank">
+        <area shape="rect" coords="400,0,800,200" href="https://kubsu.ru/ru/news" alt="новости" target="_blank">
+      </map>
+    </li>
+    
+    <li>
+      <a href="">Ссылка с пустым href </a>
+    </li> 
+    
+    <li>
+      <a>Ссылка без href</a>
+    </li>
+    
+    <li>
+      <a href="https://kubsu.ru" rel="nofollow" target="_blank">Ссылка, по которой запрещен переход поисковикам </a>
+    </li> 
+    
+    <li>
+      <a href="https://kubsu.ru" rel="noindex" target="_blank">Ссылка, запрещенная для индексации поисковиками </a>
+    </li>
+    
+    <li>
+      Нумерованный список ссылок с подписями title:
+      <ol>
+        <li><a href="https://kubsu.ru" title="Официальный сайт университета" target="_blank">Кубанский государственный университет</a></li>
+        <li><a href="https://kubsu.ru/ru/news" title="Новости КубГУ" target="_blank">Новости</a></li>
+        <li><a href="https://kubsu.ru/ru/science" title="Научная деятельность " target="_blank">Наука</a></li>
+      </ol>
+    </li> 
+    
+    <li>
+      <a href="ftp://ftp.freebsd.org/pub/FreeBSD/README.TXT" target="_blank">Ссылка на файл на сервере FTP </a>
+    </li> 
+  </ul>
+  <div id="fragment">
+    <h2>Фрагмент страницы</h2>
+    <p>Это раздел страницы, на который ведет ссылка</p>
+    <a href="#top">Вернуться наверх</a>
+  </div>
+  <h2> Форма </h2>
+  <form action="/"
+      method="POST">
+      <label>
+        ФИО:<br />
+        <input name="field-name-1"
+        placeholder="Введите ваше ФИО" required />
+      </label><br />
+      
+      <label>
+        Телефон:<br/>
+        <input name="phone" type="tel"  
+        value="+7" placeholder="Формат:+7 999 123-45-67" required>  
+      </label><br/>
+      <label>
+        Email:<br />
+        <input name="field-email"
+          type="email" required
+          placeholder="Введите вашу почту" />
+      </label><br />
+      <label>
+        Дата рождения:<br />
+        <input name="field-date" required
+          type="date" />
+      </label><br />
+      
+      Пол:<br />
+      <label><input type="radio" checked="checked" 
+        name="radio-group-1" value="Значение1" />
+        Мужской</label>
+      <label><input type="radio" 
+        name="radio-group-1" value="Значение2" />
+        Женский</label><br />
+        <label>
+          Ваш любимый язык программирования (выбрать несколько через ctrl):
+          <br />
+          <select name="field-name-2" required
+            multiple="multiple">
+            <option value="Значение1">Pascal</option>
+            <option value="Значение2">C</option>
+            <option value="Значение3">C++</option>
+            <option value="Значение4">JavaScript</option>
+            <option value="Значение5" >PHP</option>
+            <option value="Значение6" >Python</option>
+            <option value="Значение7">Java</option>
+            <option value="Значение8" >Haskel</option>
+            <option value="Значение9" >Clojure</option>
+            <option value="Значение10">Prolog</option>
+            <option value="Значение11" >Scala</option>
+          </select>
+        </label><br />
+        <label>
+          Биография:<br />
+          <textarea name="field-name-2">Ваша биография</textarea>
+        </label><br />
+        С контрактом ознакомлен(а):<br />
+      <label><input type="checkbox" required
+        name="check-1" />
+        </label><br />
+        <input type="submit" value="Сохранить" />
+      </form> 
+</body>
 </html>
