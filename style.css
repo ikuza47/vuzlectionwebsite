@@ -1,0 +1,83 @@
+
+header {
+  border: 1px solid #1c1a75;
+  border-radius: 4px;
+  background-color:lightgoldenrodyellow;
+  padding: 20px;         
+}
+
+div.links{
+  border: 1px solid #1c1a75;
+  border-radius: 4px;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom:20px;
+  margin-top: 30px;
+  background-color: lightgoldenrodyellow; 
+}
+td{
+    background-color: darkkhaki;
+}
+thead{
+    background-color: purple;
+}
+
+div.tables{
+  border: 1px solid #1c1a75;
+  border-radius: 4px;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom:20px;
+  margin-top: 50px;
+  background-color: lightgoldenrodyellow; 
+}
+
+div.forms{
+  border: 1px solid #1c1a75;
+  border-radius: 4px;
+  padding: 20px;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom:20px;
+  background-color: lightgoldenrodyellow; 
+}
+
+nav {
+  float:right;
+  margin-right: -20px;
+  margin-top: -126px; 
+  text-decoration: none;
+  color: #333;
+  padding: 8px;
+  border: 1px solid #1c1a75;
+  border-radius: 4px;
+  font-size: 15px;
+  width: 250px
+}
+
+div.name{
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom:20px;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+footer{
+  border: 1px solid #1c1a75;
+  border-radius: 4px;
+  padding: 20px;
+  background-color: lightgoldenrodyellow;
+  margin-top: 30px;
+}

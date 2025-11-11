@@ -1,30 +1,47 @@
 <!DOCTYPE html>
+
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
-  <title> Лабораторная </title>
+  <link href="style.css" rel="stylesheet">
+  <title> Лабораторные </title>
 </head>
+
 <body>
-  <h3> Ссылки </h3>
+  <header>
+    <img id="logo" src="image1.png  "> <br/>
+    <nav> 
+      <a href = "http://kubsu.ru" target = "_blank"> Ссылка меню</a>
+      <a href = "http://kubsu.ru" target = "_blank"> Ссылка 1</a>
+      <a href = "http://kubsu.ru" target = "_blank"> Ссылка 2</a>
+    </nav> <br/>
+    <div class="name"> Название сайта <br/> </div>
+  </header>
+
+<div class="links"> <h3> Ссылки </h3>
+
 <ul> 
     <li>
-  <a href = "http://kubsu.ru" target = "_blank"> Сайт КубГУ (HTTP) </a>
+  <a href = "http://kubsu.ru" target = "_blank"> Официальный сайт КубГУ (HTTP) </a>
 </li> 
+
  <li>
-  <a href = "https://kubsu.ru" target = "_blank"> Сайт КубГУ </a>
+  <a href = "https://kubsu.ru" target = "_blank"> Официальный сайт КубГУ </a>
 </li> 
+
   <li>
     <a href = "https://kubsu.ru" target = "_blank">
-      <img src="image.jpg" alt="Ссылка-изображение" id="a1" width="600" height="600">
+      <img src="image.jpg" alt="Ссылка-изображение" id="a1" width="300" height="200">
     </a>
   </li>
     
     <li>
-      <a href="#formi">Сокращенная ссылка на внутреннюю страницу </a>
+      <a href="#formi">Сокращенная ссылка на внутреннюю страницу (к форме)</a>
     </li> 
     
     <li>
-      <a href="#top">Сокращенная ссылка на главную страницу </a>
+      <a href="#top">Сокращенная ссылка на главную страницу (в начало)</a>
     </li> 
     
     <li>
@@ -66,10 +83,12 @@
     </li>
     
     <li>
-      <img src="кубгу.jpg" alt="Ссылка-изображение" usemap="#mymap" width="800" height="400">
+      <img src="круг.png" alt="Ссылка-изображение" usemap="#mymap" width="800" height="300">
       <map name="mymap">
-        <area shape="rect" coords="0,0,400,200" href="https://kubsu.ru" alt="главная" target="_blank">
-        <area shape="rect" coords="400,0,800,200" href="https://kubsu.ru/ru/news" alt="новости" target="_blank">
+
+        <area shape="circle" coords="0,0,400,200" href="https://kubsu.ru" alt="главная" target="_blank">
+        <area shape="rect" coords="400,0,800,300" href="https://kubsu.ru/ru/news" alt="новости" target="_blank">
+
       </map>
     </li>
     
@@ -102,14 +121,68 @@
       <a href="ftp://ftp.freebsd.org/pub/FreeBSD/README.TXT" target="_blank">Ссылка на файл на сервере FTP </a>
     </li> 
   </ul>
+
   <div id="fragment">
     <h2>Фрагмент страницы</h2>
     <p>Это раздел страницы, на который ведет ссылка</p>
     <a href="#top">Вернуться наверх</a>
   </div>
-  <h2> Форма </h2>
+
+</div>
+
+<div class="tables">
+
+  <h3> Таблица </h3>
+
+  <table border="1">
+    <thead>
+      <tr>
+        <th>Колонка 1</th>
+        <th>Колонка 2</th>
+        <th>Колонка 3</th>
+        <th>Колонка 4</th>
+      </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+      <td colspan="3">Ячейка 11, объединеная с 12, 13</td>
+      <td>Ячейка 14</td>
+    </tr>
+    <tr>
+      <td colspan="2">Ячейка 21, объединеная с 22</td>
+      <td colspan="2">Ячейка 23, объединеная с 24</td>
+    </tr>
+    <tr>
+      <td>Ячейка 31</td>
+      <td colspan="3">Ячейка 32, объединеная с 33, 34</td>
+    </tr>
+    <tr>
+      <td>Ячейка 41</td>
+      <td colspan="3">Ячейка 42, объединеная с 43, 44</td>
+    </tr>
+    <tr>
+      <td>Ячейка 51</td>
+      <td colspan="2">Ячейка 52, объединеная с 53</td>
+      <td>Ячейка 54</td>
+    </tr>
+    <tr>
+      <td>Ячейка 61</td>
+      <td colspan="2">Ячейка 62, объединеная с 63</td>
+      <td>Ячейка 64</td>
+    </tr>
+    </tbody>
+  </table>
+
+  </div>
+
+  <div class="forms">
+
+  <h3> Форма </h3>
+
   <form action="/"
       method="POST">
+
       <label>
         ФИО:<br />
         <input name="field-name-1"
@@ -118,15 +191,17 @@
       
       <label>
         Телефон:<br/>
-        <input name="phone" type="tel"  
-        value="+7" placeholder="Формат:+7 999 123-45-67" required>  
+        <input name="phone" type="number"  
+        value="+7" placeholder="Формат:8 999 123-45-67" required>  
       </label><br/>
+
       <label>
         Email:<br />
         <input name="field-email"
           type="email" required
           placeholder="Введите вашу почту" />
       </label><br />
+
       <label>
         Дата рождения:<br />
         <input name="field-date" required
@@ -140,6 +215,7 @@
       <label><input type="radio" 
         name="radio-group-1" value="Значение2" />
         Женский</label><br />
+
         <label>
           Ваш любимый язык программирования (выбрать несколько через ctrl):
           <br />
@@ -158,15 +234,25 @@
             <option value="Значение11" >Scala</option>
           </select>
         </label><br />
+
         <label>
           Биография:<br />
           <textarea name="field-name-2">Ваша биография</textarea>
         </label><br />
+
         С контрактом ознакомлен(а):<br />
       <label><input type="checkbox" required
         name="check-1" />
         </label><br />
+
         <input type="submit" value="Сохранить" />
       </form> 
+    </div>
+      
+      <footer>
+        (с) Великий человк  
+      </footer>
+
 </body>
+
 </html>
