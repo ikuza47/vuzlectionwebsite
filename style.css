@@ -1,3 +1,4 @@
+/* Mobile First стили */
 * {
     margin: 0;
     padding: 0;
@@ -13,17 +14,17 @@
 
 /* Шапка */
 header {
-    background-color: rgb(54, 121, 159) !important;
+    background-color: rgb(212, 190, 66) !important;
 }
 
 /* Навигация для мобильных */
 .navbar-dark.bg-warning {
-    background-color: #15ff00 !important;
+    background-color: #efefef !important;
 }
 
 /* Основные блоки контента */
 .links, .forms, .tables {
-    background-color: #15ff00;
+    background-color: #efefef;
     border: 1px solid #000000;
     border-radius: 8px;
 }
@@ -39,7 +40,7 @@ table {
 }
 
 th {
-    background-color: rgb(54, 121, 159);
+    background-color: rgb(54, 73, 159);
     color: white;
     padding: 12px;
     text-align: left;
@@ -58,13 +59,13 @@ td {
 }
 
 .links a:hover {
-    color: rgb(54, 121, 159);
+    color: rgb(54, 73, 159);
     text-decoration: underline;
 }
 
 /* Футер */
 footer {
-    background-color: rgb(54, 121, 159) !important;
+    background-color: rgb(54, 73, 159) !important;
     margin-top: auto;
 }
 
@@ -83,9 +84,12 @@ footer {
 }
 
 /* Стили для десктопов */
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
+    body{
+        background-color: #111111
+        ;}
     .nav-link.text-white:hover {
-        background-color: #15ff00;
+        background-color: #efefef;
         color: #000000 !important;
         border-radius: 4px;
         transition: all 0.3s ease;
@@ -98,13 +102,13 @@ footer {
 }
 
 .btn-primary {
-    background-color: rgb(54, 121, 159);
-    border-color: rgb(54, 121, 159);
+    background-color: rgb(54, 73, 159);
+    border-color: rgb(54, 73, 159);
 }
 
 .btn-primary:hover {
-    background-color: rgb(73, 34, 139);
-    border-color: rgb(73, 34, 139);
+    background-color: rgb(56, 26, 107);
+    border-color: rgb(56, 26, 107);
 }
 
 .form-control {
@@ -112,8 +116,8 @@ footer {
 }
 
 .form-control:focus {
-    border-color: rgb(54, 121, 159);
-    box-shadow: 0 0 0 0.2rem rgba(54, 121, 159, 0.25);
+    border-color: rgb(54, 73, 159);
+    box-shadow: 0 0 0 0.2rem rgba(54, 73, 159, 0.25);
 }
 
 .list-unstyled {
