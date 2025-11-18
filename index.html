@@ -1,258 +1,301 @@
-	<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="ru">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <link href="style.css" rel="stylesheet">
-  <title> Лабораторные </title>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <title>Лабораторные</title>
 </head>
 
 <body>
-  <header>
-    <img id="logo" src="images.jpg"> <br/>
-    <nav> 
-      <a href = "http://kubsu.ru" target = "_blank"> Ссылка меню</a>
-      <a href = "http://kubsu.ru" target = "_blank"> Ссылка 1</a>
-      <a href = "http://kubsu.ru" target = "_blank"> Ссылка 2</a>
-    </nav> <br/>
-    <div class="name"> Название сайта <br/> </div>
-  </header>
+  <div class="container-fluid p-0" style="background: black;">
+    <!-- Шапка сайта -->
+    <header class="bg-primary text-white py-3">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Логотип -->
+          <div class="col-auto">
+            <img id="logo" src="image1.png" class="img-fluid rounded-circle" style="width: 60px; height: 60px;">
+          </div>
+          <!-- Название сайта -->
+          <div class="col">
+            <div class="name h5 mb-0">Название сайта</div>
+          </div>
+          <!-- Навигация для десктопов -->
+          <nav class="col-auto d-none d-md-block">
+            <div class="nav">
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-white mx-2">Ссылка меню 1</a>
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-white mx-2">Ссылка 2</a>
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-white mx-2">Ссылка 3</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
 
-<div class="links"> <h3> Ссылки </h3>
+    <!-- Основной контент страницы -->
+    <main class="container mt-3">
+      
+      <!-- Навигация для мобильных - ПЕРВАЯ на мобильных -->
+      <div class="row">
+        <div class="col-12 order-1 mb-4 d-md-none">
+          <nav class="navbar navbar-expand navbar-dark bg-warning rounded">
+            <div class="navbar-nav w-100">
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-dark py-2 text-center">Ссылка меню 1</a>
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-dark py-2 text-center">Ссылка 2</a>
+              <a href="http://kubsu.ru" target="_blank" class="nav-link text-dark py-2 text-center">Ссылка 3</a>
+            </div>
+          </nav>
+        </div>
+      </div>
 
-<ul> 
-    <li>
-  <a href = "http://kubsu.ru" target = "_blank"> Официальный сайт КубГУ (HTTP) </a>
-</li> 
+      <div class="row">
+        
+        <!-- Таблица - ВТОРАЯ на мобильных, ПЕРВАЯ на ПК -->
+        <div class="col-12 col-lg-6 order-2 order-lg-2 mb-4">
+          <div class="tables p-3 rounded">
+            <h3 class="mb-3">Таблица</h3>
+            <div class="table-responsive">
+              <table border="1" class="w-100">
+                <thead>
+                  <tr>
+                    <th>Колонка 1</th>
+                    <th>Колонка 2</th>
+                    <th>Колонка 3</th>
+                    <th>Колонка 4</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colspan="3">Ячейка 11, объединеная с 12, 13</td>
+                    <td>Ячейка 14</td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">Ячейка 21, объединеная с 22</td>
+                    <td colspan="2">Ячейка 23, объединеная с 24</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 31</td>
+                    <td colspan="3">Ячейка 32, объединеная с 33, 34</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 41</td>
+                    <td colspan="3">Ячейка 42, объединеная с 43, 44</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 51</td>
+                    <td colspan="2">Ячейка 52, объединеная с 53</td>
+                    <td>Ячейка 54</td>
+                  </tr>
+                  <tr>
+                    <td>Ячейка 61</td>
+                    <td colspan="2">Ячейка 62, объединеная с 63</td>
+                    <td>Ячейка 64</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
 
- <li>
-  <a href = "https://kubsu.ru" target = "_blank"> Официальный сайт КубГУ </a>
-</li> 
+        <!-- Ссылки - ТРЕТЬИ на мобильных, ВТОРЫЕ на ПК -->
+        <div class="col-12 col-lg-6 order-3 order-lg-1 mb-4">
+          <div class="links bg-warning p-3 rounded">
+            <h3 class="mb-3">Ссылки</h3>
 
-  <li>
-    <a href = "https://kubsu.ru" target = "_blank">
-      <img src="image.jpg" alt="Ссылка-изображение" id="a1" width="300" height="200">
-    </a>
-  </li>
-    
-    <li>
-      <a href="#formi">Сокращенная ссылка на внутреннюю страницу (к форме)</a>
-    </li> 
-    
-    <li>
-      <a href="#top">Сокращенная ссылка на главную страницу (в начало)</a>
-    </li> 
-    
-    <li>
-      <a href="#fragment">Ссылка на фрагмент текущей страницы</a>
-    </li> 
-    
-    <li>
-      <a href="https://www.kubsu.ru/ru/search?key=программирование" target="_blank">Ссылка с тремя параметрами в URL </a>
-    </li> 
-    
-    <li>
-      <a href="https://www.kubsu.ru/ru/education/programs?id=1" target="_blank">Ссылка с параметром id в URL</a>
-    </li> 
-    
-    <li>
-      <a href="https://kubsu.ru/ru/news" target="_blank"> Относительная ссылка на страницу в текущем каталоге</a>
-    </li> 
-    
-    <li>
-      <a href="https://kubsu.ru/ru/about" target="_blank">Относительная ссылка на страницу в каталоге about</a>
-    </li> 
-    
-    <li>
-      <a href="https://kubsu.ru/ru" target="_blank">Относительная ссылка на страницу в каталоге уровнем выше текущего</a>
-    </li> 
-    
-    <li>
-      <a href="https://kubsu.ru" target="_blank">Относительная ссылка на страницу в каталоге двумя уровнями выше</a>
-    </li> 
-    
-    <li>
-      <p>Кубанский государственный университет 5 сентября отмечает 
-        <a href="https://www.kubsu.ru/ru/node/44498" target="_blank">105-летний юбилей.</a> 
-        В этот день в 1920 году вуз впервые открыл двери для студентов трех факультетов.</p>
-    </li> 
-    
-    <li>
-      <a href="https://ru.ruwiki.ru/wiki/Кубанский_государственный_университет#Структура" target="_blank">Ссылка на фрагмент страницы стороннего сайта</a>
-    </li>
-    
-    <li>
-      <img src="круг.jpg" alt="Ссылка-изображение" usemap="#mymap" width="800" height="300">
-      <map name="mymap">
+            <ul class="list-unstyled"> 
+              <li class="mb-2">
+                <a href="http://kubsu.ru" target="_blank">Официальный сайт КубГУ (HTTP)</a>
+              </li> 
 
-        <area shape="circle" coords="0,0,400,200" href="https://kubsu.ru" alt="главная" target="_blank">
-        <area shape="rect" coords="400,0,800,300" href="https://kubsu.ru/ru/news" alt="новости" target="_blank">
+              <li class="mb-2">
+                <a href="https://kubsu.ru" target="_blank">Официальный сайт КубГУ</a>
+              </li> 
 
-      </map>
-    </li>
-    
-    <li>
-      <a href="">Ссылка с пустым href </a>
-    </li> 
-    
-    <li>
-      <a>Ссылка без href</a>
-    </li>
-    
-    <li>
-      <a href="https://kubsu.ru" rel="nofollow" target="_blank">Ссылка, по которой запрещен переход поисковикам </a>
-    </li> 
-    
-    <li>
-      <a href="https://kubsu.ru" rel="noindex" target="_blank">Ссылка, запрещенная для индексации поисковиками </a>
-    </li>
-    
-    <li>
-      Нумерованный список ссылок с подписями title:
-      <ol>
-        <li><a href="https://kubsu.ru" title="Официальный сайт университета" target="_blank">Кубанский государственный университет</a></li>
-        <li><a href="https://kubsu.ru/ru/news" title="Новости КубГУ" target="_blank">Новости</a></li>
-        <li><a href="https://kubsu.ru/ru/science" title="Научная деятельность " target="_blank">Наука</a></li>
-      </ol>
-    </li> 
-    
-    <li>
-      <a href="ftp://ftp.freebsd.org/pub/FreeBSD/README.TXT" target="_blank">Ссылка на файл на сервере FTP </a>
-    </li> 
-  </ul>
+              <li class="mb-2">
+                <a href="https://kubsu.ru" target="_blank">
+                  <img src="image.jpg" alt="Ссылка-изображение" class="img-fluid" width="300" height="200">
+                </a>
+              </li>
+                
+              <li class="mb-2">
+                <a href="#formi">Сокращенная ссылка на внутреннюю страницу (к форме)</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="#top">Сокращенная ссылка на главную страницу (в начало)</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="#fragment">Ссылка на фрагмент текущей страницы</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://www.kubsu.ru/ru/search?key=программирование" target="_blank">Ссылка с тремя параметрами в URL</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://www.kubsu.ru/ru/education/programs?id=1" target="_blank">Ссылка с параметром id в URL</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru/ru/news" target="_blank">Относительная ссылка на страницу в текущем каталоге</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru/ru/about" target="_blank">Относительная ссылка на страницу в каталоге about</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru/ru" target="_blank">Относительная ссылка на страницу в каталоге уровнем выше текущего</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru" target="_blank">Относительная ссылка на страницу в каталоге двумя уровнями выше</a>
+              </li> 
+                
+              <li class="mb-2">
+                <p>Кубанский государственный университет 5 сентября отмечает 
+                  <a href="https://www.kubsu.ru/ru/node/44498" target="_blank">105-летний юбилей.</a> 
+                  В этот день в 1920 году вуз впервые открыл двери для студентов трех факультетов.</p>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://ru.ruwiki.ru/wiki/Кубанский_государственный_университет#Структура" target="_blank">Ссылка на фрагмент страницы стороннего сайта</a>
+              </li>
+                
+              <li class="mb-2">
+                <img src="круг.png" alt="Ссылка-изображение" usemap="#mymap" class="img-fluid" width="800" height="300">
+                <map name="mymap">
+                  <area shape="circle" coords="0,0,400,200" href="https://kubsu.ru" alt="главная" target="_blank">
+                  <area shape="rect" coords="400,0,800,300" href="https://kubsu.ru/ru/news" alt="новости" target="_blank">
+                </map>
+              </li>
+                
+              <li class="mb-2">
+                <a href="">Ссылка с пустым href</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a>Ссылка без href</a>
+              </li>
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru" rel="nofollow" target="_blank">Ссылка, по которой запрещен переход поисковикам</a>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="https://kubsu.ru" rel="noindex" target="_blank">Ссылка, запрещенная для индексации поисковиками</a>
+              </li>
+                
+              <li class="mb-2">
+                Нумерованный список ссылок с подписями title:
+                <ol class="mt-2">
+                  <li><a href="https://kubsu.ru" title="Официальный сайт университета" target="_blank">Кубанский государственный университет</a></li>
+                  <li><a href="https://kubsu.ru/ru/news" title="Новости КубГУ" target="_blank">Новости</a></li>
+                  <li><a href="https://kubsu.ru/ru/science" title="Научная деятельность" target="_blank">Наука</a></li>
+                </ol>
+              </li> 
+                
+              <li class="mb-2">
+                <a href="ftp://ftp.freebsd.org/pub/FreeBSD/README.TXT" target="_blank">Ссылка на файл на сервере FTP</a>
+              </li> 
+            </ul>
 
-  <div id="fragment">
-    <h2>Фрагмент страницы</h2>
-    <p>Это раздел страницы, на который ведет ссылка</p>
-    <a href="#top">Вернуться наверх</a>
+            <div id="fragment" class="mt-4 p-3 bg-light rounded">
+              <h4>Фрагмент страницы</h4>
+              <p>Это раздел страницы, на который ведет ссылка</p>
+              <a href="#top" class="btn btn-primary btn-sm">Вернуться наверх</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Форма - ЧЕТВЕРТАЯ на мобильных, ТРЕТЬЯ на ПК -->
+      <div class="row">
+        <div class="col-12 order-4">
+          <div id="formi" class="forms bg-warning p-3 rounded">
+            <h3 class="mb-3">Форма</h3>
+
+            <form action="/" method="POST">
+
+              <div class="form-group">
+                <label>ФИО:</label>
+                <input name="field-name-1" class="form-control" placeholder="Введите ваше ФИО" required />
+              </div>
+              
+              <div class="form-group">
+                <label>Телефон:</label>
+                <input name="phone" type="tel" class="form-control" value="+7" placeholder="Формат:8 999 123-45-67" required>  
+              </div>
+
+              <div class="form-group">
+                <label>Email:</label>
+                <input name="field-email" type="email" class="form-control" required placeholder="Введите вашу почту" />
+              </div>
+
+              <div class="form-group">
+                <label>Дата рождения:</label>
+                <input name="field-date" required type="date" class="form-control" />
+              </div>
+              
+              <div class="form-group">
+                <label>Пол:</label><br />
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" checked name="radio-group-1" value="Значение1" />
+                  <label class="form-check-label">Мужской</label>
+                </div>
+                <div class="form-check form-check-inline">
+                  <input class="form-check-input" type="radio" name="radio-group-1" value="Значение2" />
+                  <label class="form-check-label">Женский</label>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label>Ваш любимый язык программирования (выбрать несколько через ctrl):</label>
+                <select name="field-name-2" required multiple class="form-control">
+                  <option value="Значение1">Pascal</option>
+                  <option value="Значение2">C</option>
+                  <option value="Значение3">C++</option>
+                  <option value="Значение4">JavaScript</option>
+                  <option value="Значение5">PHP</option>
+                  <option value="Значение6">Python</option>
+                  <option value="Значение7">Java</option>
+                  <option value="Значение8">Haskel</option>
+                  <option value="Значение9">Clojure</option>
+                  <option value="Значение10">Prolog</option>
+                  <option value="Значение11">Scala</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label>Биография:</label>
+                <textarea name="field-name-2" class="form-control">Ваша биография</textarea>
+              </div>
+
+              <div class="form-group form-check">
+                <input type="checkbox" required class="form-check-input" name="check-1" />
+                <label class="form-check-label">С контрактом ознакомлен(а)</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary">Сохранить</button>
+            </form> 
+          </div>
+        </div>
+      </div>
+    </main>
+      
+    <!-- Футер сайта -->
+    <footer class="bg-primary text-white py-3 mt-4">
+      <div class="container text-center">
+        (с) Хороший человек 
+      </div>
+    </footer>
   </div>
-
-</div>
-
-<div class="tables">
-
-  <h3> Таблица </h3>
-
-  <table border="1">
-    <thead>
-      <tr>
-        <th>Колонка 1</th>
-        <th>Колонка 2</th>
-        <th>Колонка 3</th>
-        <th>Колонка 4</th>
-      </tr>
-    </thead>
-
-    <tbody>
-    <tr>
-      <td colspan="3" style="background:red;">Ячейка 11, объединеная с 12, 13</td>
-      <td style="background:red;">Ячейка 14</td>
-    </tr>
-    <tr>
-      <td colspan="2" style="background:blue;">Ячейка 21, объединеная с 22</td>
-      <td colspan="2" style="background:blue;">Ячейка 23, объединеная с 24</td>
-    </tr>
-    <tr>
-      <td style="background:red;">Ячейка 31</td>
-      <td colspan="3" style="background:red;">Ячейка 32, объединеная с 33, 34</td>
-    </tr>
-    <tr>
-      <td style="background:blue;">Ячейка 41</td>
-      <td colspan="3" style="background:blue;">Ячейка 42, объединеная с 43, 44</td>
-    </tr>
-    <tr>
-      <td style="background:red;">Ячейка 51</td>
-      <td colspan="2" style="background:red;">Ячейка 52, объединеная с 53</td>
-      <td style="background:red;">Ячейка 54</td>
-    </tr>
-    <tr>
-      <td style="background:blue;">Ячейка 61</td>
-      <td colspan="2" style="background:blue;">Ячейка 62, объединеная с 63</td>
-      <td style="background:blue;">Ячейка 64</td>
-    </tr>
-    </tbody>
-  </table>
-
-  </div>
-
-  <div class="forms">
-
-  <h3> Форма </h3>
-
-  <form action="/"
-      method="POST">
-
-      <label>
-        ФИО:<br />
-        <input name="field-name-1"
-        placeholder="Введите ваше ФИО" required />
-      </label><br />
-      
-      <label>
-        Телефон:<br/>
-        <input name="phone" type="number"  
-        value="+7" placeholder="Формат:8 999 123-45-67" required>  
-      </label><br/>
-
-      <label>
-        Email:<br />
-        <input name="field-email"
-          type="email" required
-          placeholder="Введите вашу почту" />
-      </label><br />
-
-      <label>
-        Дата рождения:<br />
-        <input name="field-date" required
-          type="date" />
-      </label><br />
-      
-      Пол:<br />
-      <label><input type="radio" checked="checked" 
-        name="radio-group-1" value="Значение1" />
-        Мужской</label>
-      <label><input type="radio" 
-        name="radio-group-1" value="Значение2" />
-        Женский</label><br />
-
-        <label>
-          Ваш любимый язык программирования (выбрать несколько через ctrl):
-          <br />
-          <select name="field-name-2" required
-            multiple="multiple">
-            <option value="Значение1">Pascal</option>
-            <option value="Значение2">C</option>
-            <option value="Значение3">C++</option>
-            <option value="Значение4">JavaScript</option>
-            <option value="Значение5" >PHP</option>
-            <option value="Значение6" >Python</option>
-            <option value="Значение7">Java</option>
-            <option value="Значение8" >Haskel</option>
-            <option value="Значение9" >Clojure</option>
-            <option value="Значение10">Prolog</option>
-            <option value="Значение11" >Scala</option>
-          </select>
-        </label><br />
-
-        <label>
-          Биография:<br />
-          <textarea name="field-name-2">Ваша биография</textarea>
-        </label><br />
-
-        С контрактом ознакомлен(а):<br />
-      <label><input type="checkbox" required
-        name="check-1" />
-        </label><br />
-
-        <input type="submit" value="Сохранить" />
-      </form> 
-    </div>
-      
-      <footer>
-        (с) Великий человк  
-      </footer>
-
 </body>
-
 </html>

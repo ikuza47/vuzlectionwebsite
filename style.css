@@ -1,83 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.container-fluid {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Шапка */
 header {
-  border: 1px solid #1c1a75;
-  border-radius: 4px;
-  background-color:lightgoldenrodyellow;
-  padding: 20px;         
+    background-color: rgb(54, 121, 159) !important;
 }
 
-div.links{
-  border: 1px solid #1c1a75;
-  border-radius: 4px;
-  padding: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom:20px;
-  margin-top: 30px;
-  background-color: lightgoldenrodyellow; 
-}
-td{
-    background-color: darkkhaki;
-}
-thead{
-    background-color: purple;
+/* Навигация для мобильных */
+.navbar-dark.bg-warning {
+    background-color: #15ff00 !important;
 }
 
-div.tables{
-  border: 1px solid #1c1a75;
-  border-radius: 4px;
-  padding: 20px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom:20px;
-  margin-top: 50px;
-  background-color: lightgoldenrodyellow; 
+/* Основные блоки контента */
+.links, .forms, .tables {
+    background-color: #15ff00;
+    border: 1px solid #000000;
+    border-radius: 8px;
 }
 
-div.forms{
-  border: 1px solid #1c1a75;
-  border-radius: 4px;
-  padding: 20px;
-  margin-top: 50px;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom:20px;
-  background-color: lightgoldenrodyellow; 
+/* Стили для таблицы */
+.table-responsive {
+    overflow-x: auto;
 }
 
-nav {
-  float:right;
-  margin-right: -20px;
-  margin-top: -126px; 
-  text-decoration: none;
-  color: #333;
-  padding: 8px;
-  border: 1px solid #1c1a75;
-  border-radius: 4px;
-  font-size: 15px;
-  width: 250px
+table {
+    width: 100%;
+    border-collapse: collapse;
 }
 
-div.name{
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-bottom:20px;
+th {
+    background-color: rgb(54, 121, 159);
+    color: white;
+    padding: 12px;
+    text-align: left;
 }
 
-#logo {
-  width: 100px;
-  height: 100px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
+td {
+    background-color: #ffffff;
+    padding: 12px;
+    border: 1px solid #ddd;
 }
 
-footer{
-  border: 1px solid #1c1a75;
-  border-radius: 4px;
-  padding: 20px;
-  background-color: lightgoldenrodyellow;
-  margin-top: 30px;
+/* Стили для ссылок */
+.links a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.links a:hover {
+    color: rgb(54, 121, 159);
+    text-decoration: underline;
+}
+
+/* Футер */
+footer {
+    background-color: rgb(54, 121, 159) !important;
+    margin-top: auto;
+}
+
+/* Улучшения для мобильных */
+@media (max-width: 767px) {
+    .links ul {
+        padding-left: 1rem;
+    }
+    
+    .links li {
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 4px;
+    }
+}
+
+/* Стили для десктопов */
+@media (min-width: 768px) {
+    .nav-link.text-white:hover {
+        background-color: #15ff00;
+        color: #000000 !important;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+}
+
+/* Дополнительные улучшения */
+.rounded {
+    border-radius: 8px !important;
+}
+
+.btn-primary {
+    background-color: rgb(54, 121, 159);
+    border-color: rgb(54, 121, 159);
+}
+
+.btn-primary:hover {
+    background-color: rgb(73, 34, 139);
+    border-color: rgb(73, 34, 139);
+}
+
+.form-control {
+    border: 1px solid #000000;
+}
+
+.form-control:focus {
+    border-color: rgb(54, 121, 159);
+    box-shadow: 0 0 0 0.2rem rgba(54, 121, 159, 0.25);
+}
+
+.list-unstyled {
+    list-style: none;
+    padding-left: 0;
 }
