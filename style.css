@@ -14,17 +14,17 @@
 
 /* Шапка */
 header {
-    background-color: rgb(212, 190, 66) !important;
+    background-color: rgb(93, 54, 159) !important;
 }
 
 /* Навигация для мобильных */
 .navbar-dark.bg-warning {
-    background-color: #efefef !important;
+    background-color: #FFD700 !important;
 }
 
 /* Основные блоки контента */
-.links, .forms, .tables {
-    background-color: #efefef;
+.links, .forms, .tables,.result {
+    background-color: #FFD700;
     border: 1px solid #000000;
     border-radius: 8px;
 }
@@ -40,7 +40,7 @@ table {
 }
 
 th {
-    background-color: rgb(54, 73, 159);
+    background-color: rgb(93, 54, 159);
     color: white;
     padding: 12px;
     text-align: left;
@@ -59,13 +59,13 @@ td {
 }
 
 .links a:hover {
-    color: rgb(54, 73, 159);
+    color: rgb(93, 54, 159);
     text-decoration: underline;
 }
 
 /* Футер */
 footer {
-    background-color: rgb(54, 73, 159) !important;
+    background-color: rgb(93, 54, 159) !important;
     margin-top: auto;
 }
 
@@ -85,15 +85,16 @@ footer {
 
 /* Стили для десктопов */
 @media (min-width: 1024px) {
-    body{
-        background-color: #111111
-        ;}
     .nav-link.text-white:hover {
-        background-color: #efefef;
+        background-color: #FFD700;
         color: #000000 !important;
         border-radius: 4px;
         transition: all 0.3s ease;
     }
+}
+
+.result {
+    border: 1px solid #000000;
 }
 
 /* Дополнительные улучшения */
@@ -102,13 +103,13 @@ footer {
 }
 
 .btn-primary {
-    background-color: rgb(54, 73, 159);
-    border-color: rgb(54, 73, 159);
+    background-color: rgb(93, 54, 159);
+    border-color: rgb(93, 54, 159);
 }
 
 .btn-primary:hover {
-    background-color: rgb(56, 26, 107);
-    border-color: rgb(56, 26, 107);
+    background-color: rgb(73, 34, 139);
+    border-color: rgb(73, 34, 139);
 }
 
 .form-control {
@@ -116,8 +117,8 @@ footer {
 }
 
 .form-control:focus {
-    border-color: rgb(54, 73, 159);
-    box-shadow: 0 0 0 0.2rem rgba(54, 73, 159, 0.25);
+    border-color: rgb(93, 54, 159);
+    box-shadow: 0 0 0 0.2rem rgba(93, 54, 159, 0.25);
 }
 
 .list-unstyled {
