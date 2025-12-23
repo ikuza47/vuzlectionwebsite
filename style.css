@@ -22,8 +22,12 @@ header {
     background-color: #FFD700 !important;
 }
 
+.result {
+    border: 1px solid #000000;
+}
+
 /* Основные блоки контента */
-.links, .forms, .tables,.result {
+.links, .forms, .tables {
     background-color: #FFD700;
     border: 1px solid #000000;
     border-radius: 8px;
@@ -91,10 +95,10 @@ footer {
         border-radius: 4px;
         transition: all 0.3s ease;
     }
-}
 
-.result {
+    .result {
     border: 1px solid #000000;
+}
 }
 
 /* Дополнительные улучшения */

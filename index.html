@@ -12,7 +12,7 @@
   <title>Лабораторные</title>
 </head>
 
-<body>
+<body style="background-color:black">
   <div class="container-fluid p-0">
     <header class="bg-primary text-white py-3">
       <div class="container">
@@ -161,7 +161,7 @@
               </li>
                 
               <li class="mb-2">
-                <img src="круг.png" alt="Ссылка-изображение" usemap="#mymap" class="img-fluid" width="800" height="300">
+                <img src="circle.png" alt="Ссылка-изображение" usemap="#mymap" class="img-fluid" width="800" height="300">
                 <map name="mymap">
                   <area shape="circle" coords="0,0,400,200" href="https://kubsu.ru" alt="главная" target="_blank">
                   <area shape="rect" coords="400,0,800,300" href="https://kubsu.ru/ru/news" alt="новости" target="_blank">
@@ -207,59 +207,17 @@
         </div>
       </div>
 
-<div class="col-12 col-lg-12 mb-4 bg-warning p-3 rounded" border="1">
+<div id="result" class="col-12 col-lg-12 mb-4 bg-warning p-3 rounded">
 <form>
-  <h3>Калькулятор ремонта смартфонов</h3>
-  <h6><label> Введите количество: </label></h6>
-  <input id="field1" name="field1" type="number" class="mb-1 rounded" min="1" max="10" value="1"> </br> <!-- Добавлен id и value -->
-  <h6><label> Тип услуги: </label></h6>
-  <div class="radio-group">
-    <label>
-      <input type="radio" name="serviceType" value="screen" checked> <!-- Добавлен checked -->
-      Замена дисплея
-    </label>
-    <label>
-      <input type="radio" name="serviceType" value="battery"> 
-      Замена батареи
-    </label>
-    <label>
-      <input type="radio" name="serviceType" value="port"> 
-      Замена порта зарядки
-    </label>
-  </div>
+  <h3>Калькулятор</h3>
+  <input name="field1" type="text" class="mb-1 rounded" placeholder="Введите кол-во товара"> </br>
+  <select name="select1" class="mb-1 rounded" >
+    <option value="50">Волейбольный мяч, 50 рублей</option>
+    <option value="75">Футбольный мяч, 75 рублей</option>
+    <option value="100">Баскетбольный мяч, 100 рублей</option>
+  </select> </br>
+  <button id="button1" class="mb-1 rounded">Рассчитать</button>
   
-  <div class="form-group">
-    <h6><label for="brand"> Бренд телефона: </label></h6> 
-    <select id="brand">
-      <option value="apple">iPhone</option>
-      <option value="samsung">Samsung</option>
-      <option value="xiaomi">Xiaomi</option>
-    </select> 
-  </div>
-
-  <div class="form-group">
-    <h6><label>Дополнительные опции:</label> </h6>
-    <div class="checkbox-group">
-      <label>
-        <input type="checkbox" id="urgent"> 
-        Срочный ремонт (+20%)
-      </label>
-      <label>
-        <input type="checkbox" id="warranty"> 
-        Расширенная гарантия (+15%)
-      </label>
-      <label>
-        <input type="checkbox" id="delivery"> 
-        Выезд мастера (+500 руб.)
-      </label>
-    </div>
-  </div>
-
-   <button type="button" onclick="calculatePrice()">Рассчитать стоимость</button> <!-- Добавлен type="button" -->
-        
-  <div class="result" id="result">
-    Общая стоимость: 0 руб.
-  </div>
 </form>
 </div>
 
@@ -338,10 +296,12 @@
 
     <footer class="bg-primary text-white py-3 mt-4">
       <div class="container text-center">
-        (с) Рожко Сергей  
+        (с) Рожко Сергей
       </div>
     </footer>
   </div>
   <script src="script.js"> </script>  
 </body>
+
 </html>
+
