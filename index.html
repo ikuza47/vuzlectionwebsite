@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-  <link href="style.css" rel="stylesheet">
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
   <title>Лабораторные</title>
 </head>
 
-<body style="background-color:black">
+<body>
   <div class="container-fluid p-0">
     <header class="bg-primary text-white py-3">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-auto">
-            <img id="logo" src="image1.png" class="img-fluid rounded-circle" style="width: 60px; height: 60px;">
+            <img id="logo" src="image1.png" class="img-fluid rounded-circle" style="width: 60px; height: 60px;" alt="Логотип">
           </div>
           <div class="col">
             <div class="name h5 mb-0">Название сайта</div>
@@ -161,7 +160,7 @@
               </li>
                 
               <li class="mb-2">
-                <img src="circle.png" alt="Ссылка-изображение" usemap="#mymap" class="img-fluid" width="800" height="300">
+                <img src="круг.png" alt="Ссылка-изображение" usemap="#mymap" class="img-fluid" width="800" height="300">
                 <map name="mymap">
                   <area shape="circle" coords="0,0,400,200" href="https://kubsu.ru" alt="главная" target="_blank">
                   <area shape="rect" coords="400,0,800,300" href="https://kubsu.ru/ru/news" alt="новости" target="_blank">
@@ -203,30 +202,147 @@
               <p>Это раздел страницы, на который ведет ссылка</p>
               <a href="#top" class="btn btn-primary btn-sm">Вернуться наверх</a>
             </div>
+            
+            <!-- Кнопка открытия формы обратной связи -->
+            <div class="text-center mt-4">
+              <button id="openFeedbackBtn" class="open-feedback-btn">
+                <i class="fas fa-envelope"></i> Форма обратной связи
+              </button>
+            </div>
           </div>
         </div>
       </div>
 
-<div id="result" class="col-12 col-lg-12 mb-4 bg-warning p-3 rounded">
-<form>
-  <h3>Калькулятор</h3>
-  <input name="field1" type="text" class="mb-1 rounded" placeholder="Введите кол-во товара"> </br>
-  <select name="select1" class="mb-1 rounded" >
-    <option value="50">Волейбольный мяч, 50 рублей</option>
-    <option value="75">Футбольный мяч, 75 рублей</option>
-    <option value="100">Баскетбольный мяч, 100 рублей</option>
-  </select> </br>
-  <button id="button1" class="mb-1 rounded">Рассчитать</button>
-  
-</form>
-</div>
+      <div class="col-12 col-lg-12 mb-4 bg-warning p-3 rounded">
+        <form>
+          <h3>Калькулятор ремонта смартфонов</h3>
+          <h6><label> Введите количество: </label></h6>
+          <input id="field1" name="field1" type="number" class="mb-1 rounded form-control" min="1" max="10" value="1" style="max-width: 150px;">
+          <h6><label> Тип услуги: </label></h6>
+          <div class="radio-group">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="serviceType" id="screen" value="screen" checked>
+              <label class="form-check-label" for="screen">Замена дисплея</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="serviceType" id="battery" value="battery">
+              <label class="form-check-label" for="battery">Замена батареи</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="serviceType" id="port" value="port">
+              <label class="form-check-label" for="port">Замена порта зарядки</label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <h6><label for="brand"> Бренд телефона: </label></h6> 
+            <select id="brand" class="form-control" style="max-width: 200px;">
+              <option value="apple">iPhone</option>
+              <option value="samsung">Samsung</option>
+              <option value="xiaomi">Xiaomi</option>
+            </select> 
+          </div>
+
+          <div class="form-group">
+            <h6><label>Дополнительные опции:</label> </h6>
+            <div class="checkbox-group">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="urgent">
+                <label class="form-check-label" for="urgent">Срочный ремонт (+20%)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="warranty">
+                <label class="form-check-label" for="warranty">Расширенная гарантия (+15%)</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="delivery">
+                <label class="form-check-label" for="delivery">Выезд мастера (+500 руб.)</label>
+              </div>
+            </div>
+          </div>
+                
+          <div class="result" id="result">
+            Общая стоимость: 0 руб.
+          </div>
+        </form>
+
+        <div class="gallery-container">
+          <h1 class="gallery-title">Фотогалерея</h1>
+          
+          <div class="gallery-wrapper">
+            <button class="gallery-nav prev" aria-label="Предыдущий слайд">‹</button>
+            
+            <div class="gallery-track">
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images2.jpg" alt="Горный пейзаж" class="gallery-image">
+                  <div class="gallery-caption">Горный пейзаж</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images3.jpg" alt="Лесная тропа" class="gallery-image">
+                  <div class="gallery-caption">Лесная тропа</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images4.webp" alt="Зеленый лес" class="gallery-image">
+                  <div class="gallery-caption">Зеленый лес</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images5.jpg" alt="Горная река" class="gallery-image">
+                  <div class="gallery-caption">Горная река</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images6.jpg" alt="Озеро в горах" class="gallery-image">
+                  <div class="gallery-caption">Озеро в горах</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images7.webp" alt="Туманное утро" class="gallery-image">
+                  <div class="gallery-caption">Туманное утро</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images8.avif" alt="Снежные вершины" class="gallery-image">
+                  <div class="gallery-caption">Снежные вершины</div>
+                </div>
+              </div>
+              <div class="gallery-slide">
+                <div class="gallery-item">
+                  <img src="images9.jpg" alt="Звездная ночь" class="gallery-image">
+                  <div class="gallery-caption">Звездная ночь</div>
+                </div>
+              </div>
+            </div>
+            
+            <button class="gallery-nav next" aria-label="Следующий слайд">›</button>
+          </div>
+          
+          <div class="gallery-pager">
+            <div class="pager-info">
+              Страница <span class="current-page">1</span> из <span class="total-pages">3</span>
+            </div>
+            <div class="pager-dots">
+              <!-- dots will be generated by JavaScript -->
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div class="row">
         <div class="col-12 order-4">
           <div id="formi" class="forms bg-warning p-3 rounded">
             <h3 class="mb-3">Форма</h3>
 
-            <form action="/" method="POST">
+            <form method="POST" id="mainForm">
 
               <div class="form-group">
                 <label>ФИО:</label>
@@ -251,39 +367,39 @@
               <div class="form-group">
                 <label>Пол:</label><br />
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" checked name="radio-group-1" value="Значение1" />
+                  <input class="form-check-input" type="radio" checked name="radio-group-1" value="Мужской" />
                   <label class="form-check-label">Мужской</label>
                 </div>
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="radio-group-1" value="Значение2" />
+                  <input class="form-check-input" type="radio" name="radio-group-1" value="Женский" />
                   <label class="form-check-label">Женский</label>
                 </div>
               </div>
 
               <div class="form-group">
                 <label>Ваш любимый язык программирования (выбрать несколько через ctrl):</label>
-                <select name="field-name-2" required multiple class="form-control">
-                  <option value="Значение1">Pascal</option>
-                  <option value="Значение2">C</option>
-                  <option value="Значение3">C++</option>
-                  <option value="Значение4">JavaScript</option>
-                  <option value="Значение5">PHP</option>
-                  <option value="Значение6">Python</option>
-                  <option value="Значение7">Java</option>
-                  <option value="Значение8">Haskel</option>
-                  <option value="Значение9">Clojure</option>
-                  <option value="Значение10">Prolog</option>
-                  <option value="Значение11">Scala</option>
+                <select name="languages" required multiple class="form-control">
+                  <option value="Pascal">Pascal</option>
+                  <option value="C">C</option>
+                  <option value="C++">C++</option>
+                  <option value="JavaScript">JavaScript</option>
+                  <option value="PHP">PHP</option>
+                  <option value="Python">Python</option>
+                  <option value="Java">Java</option>
+                  <option value="Haskel">Haskel</option>
+                  <option value="Clojure">Clojure</option>
+                  <option value="Prolog">Prolog</option>
+                  <option value="Scala">Scala</option>
                 </select>
               </div>
 
               <div class="form-group">
                 <label>Биография:</label>
-                <textarea name="field-name-2" class="form-control">Ваша биография</textarea>
+                <textarea name="biography" class="form-control" placeholder="Ваша биография"></textarea>
               </div>
 
               <div class="form-group form-check">
-                <input type="checkbox" required class="form-check-input" name="check-1" />
+                <input type="checkbox" required class="form-check-input" name="agreement" />
                 <label class="form-check-label">С контрактом ознакомлен(а)</label>
               </div>
 
@@ -296,12 +412,70 @@
 
     <footer class="bg-primary text-white py-3 mt-4">
       <div class="container text-center">
-        (с) Рожко Сергей
+        (с) Гусев Егор  
       </div>
     </footer>
   </div>
-  <script src="script.js"> </script>  
+
+  <!-- Попап с формой обратной связи -->
+  <div id="feedbackPopup" class="feedback-popup-overlay">
+    <div class="feedback-form-container">
+      <div class="feedback-form-header">
+        <h3>Обратная связь</h3>
+        <button id="closeFeedbackBtn" class="close-feedback-btn">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      
+      <div id="feedbackMessageContainer"></div>
+      
+      <form id="feedbackForm" class="feedback-form">
+        <div class="form-group">
+          <label for="feedbackFullName">ФИО *</label>
+          <input type="text" class="form-control" id="feedbackFullName" name="fullName" required placeholder="Введите ваше полное имя">
+        </div>
+        
+        <div class="form-group">
+          <label for="feedbackEmail">Email *</label>
+          <input type="email" class="form-control" id="feedbackEmail" name="email" required placeholder="example@domain.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="feedbackPhone">Телефон</label>
+          <input type="tel" class="form-control" id="feedbackPhone" name="phone" placeholder="+7 (XXX) XXX-XX-XX">
+        </div>
+        
+        <div class="form-group">
+          <label for="feedbackOrganization">Организация</label>
+          <input type="text" class="form-control" id="feedbackOrganization" name="organization" placeholder="Название вашей организации">
+        </div>
+        
+        <div class="form-group">
+          <label for="feedbackMessage">Сообщение *</label>
+          <textarea class="form-control" id="feedbackMessage" name="message" required rows="4" placeholder="Введите ваше сообщение..."></textarea>
+        </div>
+        
+        <div class="form-group form-check">
+          <input type="checkbox" class="form-check-input" id="feedbackPrivacyPolicy" name="privacyPolicy" required>
+          <label class="form-check-label" for="feedbackPrivacyPolicy">
+            Я согласен с <a href="#" id="feedbackPrivacyPolicyLink">политикой обработки персональных данных</a> *
+          </label>
+        </div>
+        
+        <button type="submit" id="feedbackSubmitBtn" class="btn btn-primary btn-block">
+          <span id="feedbackSubmitText">Отправить сообщение</span>
+          <span id="feedbackSubmitLoading" class="loading" style="display: none;"></span>
+        </button>
+        
+        <div class="save-info">
+          <i class="fas fa-save"></i> Данные формы сохраняются автоматически
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
+  
 </body>
-
 </html>
-
